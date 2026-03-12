@@ -30,7 +30,7 @@ def infafp(message):
     
                 balance = str(await client.get_balance())[8:][:8]
                 balance1 = str(await client1.get_balance())[8:][:6]
-                bot.send_message(message.chat.id, f'Баланс Libro11: {balance} рублей\nБаланс FIiz0r: {balance1} рублей')
+                bot.send_message(message.chat.id, f'Баланс Libro11: {balance} рублей \n Баланс FIiz0r: {balance1} рублей')
                 await client.cancel_background_tasks()
                 
         if __name__ == "__main__":
