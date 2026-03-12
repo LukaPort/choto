@@ -36,7 +36,7 @@ def infafp(message):
         if __name__ == "__main__":
             asyncio.run(main())
     else:
-        bot.send_message(message.chat.if, 'У вас нет прав использовать данный бот')
+        bot.send_message(message.chat.id, 'У вас нет прав использовать данный бот')
 
 
 
