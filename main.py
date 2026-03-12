@@ -13,12 +13,14 @@ GOLDEN_KEY = "6o1mrmxqbh2spjoct0z0y6fe5rvxcsgu"
 golden_key = "ap90fho0m2xa299htgg0s36460t82wrg"
 
 balance=''
+balance1=''
 
 
 @bot.message_handler(commands=['infafp'])
 def infafp(message):
-    if message.from_user.username == D0X_EXPERT or message.from_user.username == QC11L:
+    
         global balance
+        global balance1
         logging.basicConfig(level=logging.INFO)
     
     
@@ -35,9 +37,5 @@ def infafp(message):
                 
         if __name__ == "__main__":
             asyncio.run(main())
-    else:
-        bot.send_message(message.chat.id, 'У вас нет прав использовать данный бот')
-
-
 
 bot.infinity_polling()
