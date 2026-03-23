@@ -18,7 +18,7 @@ balance1=''
 
 @bot.message_handler(commands=['infafp'])
 def infafp(message):
-    if message.from_user.id==907732046 or message.from_user.id==6552292074
+    if message.from_user.id==907732046 or message.from_user.id==6552292074:
         global balance
         global balance1
         logging.basicConfig(level=logging.INFO)
