@@ -16,7 +16,7 @@ balance=''
 balance1=''
 
 
-@bot.message_handler(commands=['infafp'])
+@bot.message_handler(commands=['infafp', 'start'])
 def infafp(message):
     if message.from_user.id==907732046 or message.from_user.id==6552292074:
         global balance
