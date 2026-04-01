@@ -4,6 +4,8 @@ import logging
 import subprocess
 
 subprocess.run("pip install funpayace", shell=True)
+a =input('Введите число:')
+print(a)
 
 from funpayace import FunpayAce, FunpayConfig
 
