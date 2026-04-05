@@ -9,8 +9,8 @@ from funpayace import FunpayAce, FunpayConfig
 
 bot = telebot.TeleBot('8675951751:AAGBwLmpX1Yb-QCbCwSXD7gqD9RrAkzQKY0')
 
-GOLDEN_KEY = "6o1mrmxqbh2spjoct0z0y6fe5rvxcsgu"
-golden_key = "ap90fho0m2xa299htgg0s36460t82wrg"
+GOLDEN_KEY = "7lsgl34n3o1age67ievhrd45m0u86i26"
+#golden_key = "ap90fho0m2xa299htgg0s36460t82wrg"
 
 balance=''
 balance1=''
@@ -20,21 +20,21 @@ balance1=''
 def infafp(message):
     if message.from_user.id==907732046 or message.from_user.id==6552292074:
         global balance
-        global balance1
+        #global balance1
         logging.basicConfig(level=logging.INFO)
     
     
         async def main():
-            client1 = FunpayAce(golden_key=golden_key, config=FunpayConfig())
+            #client1 = FunpayAce(golden_key=golden_key, config=FunpayConfig())
             client = FunpayAce(golden_key=GOLDEN_KEY, config=FunpayConfig())
             async with client:
     
     
                 balance = str(await client.get_balance())[8:][:8]
-                balance1 = str(await client1.get_balance())[8:][:6]
-                bot.send_message(message.chat.id, f'Баланс Libro11: {balance} рублей\nБаланс FIiz0r: {balance1} рублей')
+                #balance1 = str(await client1.get_balance())[8:][:6]
+                bot.send_message(message.chat.id, f'Баланс Libro11: {balance} рублей')
                 await client.cancel_background_tasks()
-                
+                #\nБаланс FIiz0r: {balance1} рублей
         if __name__ == "__main__":
             asyncio.run(main())
     else:
